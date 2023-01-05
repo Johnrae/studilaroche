@@ -1,0 +1,42 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "consulting-project",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": "cotton",
+    "summary": [
+      {
+        "type": "paragraph",
+        "text": "Aliqua sint velit amet occaecat occaecat nisi est officia sunt enim in nulla.",
+        "spans": []
+      }
+    ],
+    "header": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+      "full": {
+        "dimensions": {
+          "width": 1440,
+          "height": 900
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8"
+      }
+    },
+    "slices": []
+  }
+}

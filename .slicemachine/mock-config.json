@@ -1,0 +1,51 @@
+{
+  "_cts": {
+    "event": {
+      "body": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "socialLinks": {},
+      "bands": {}
+    },
+    "consulting-project": {
+      "summary": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "band": {
+      "bio": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "links": {}
+    }
+  },
+  "slices": {
+    "BasicContent": {
+      "default": {
+        "primary": {
+          "body": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "ImageGallery": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
+  }
+}

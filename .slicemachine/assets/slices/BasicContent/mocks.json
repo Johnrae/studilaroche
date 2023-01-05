@@ -1,0 +1,19 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Adipisicing est officia fugiat.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "basic_content"
+  }
+]

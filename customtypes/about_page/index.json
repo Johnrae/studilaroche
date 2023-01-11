@@ -1,0 +1,9 @@
+{
+  "id": "about_page",
+  "label": "About Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}

@@ -27,7 +27,10 @@
       },
       "links": {}
     },
-    "work": {}
+    "work": {},
+    "service": {},
+    "home_page": {},
+    "about_page": {}
   },
   "slices": {
     "BasicContent": {

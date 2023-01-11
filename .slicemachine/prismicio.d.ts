@@ -6,6 +6,88 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for About Page documents */
+type AboutPageDocumentData = Record<string, never>;
+/**
+ * About Page document from Prismic
+ *
+ * - **API ID**: `about_page`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AboutPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<AboutPageDocumentData>, "about_page", Lang>;
+/** Content for Home Page documents */
+interface HomePageDocumentData {
+    /**
+     * Content field in *Home Page*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.content
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    content: prismicT.RichTextField;
+    /**
+     * Featured Image field in *Home Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.featured_image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    featured_image: prismicT.ImageField<never>;
+}
+/**
+ * Home Page document from Prismic
+ *
+ * - **API ID**: `home_page`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HomePageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomePageDocumentData>, "home_page", Lang>;
+/** Content for Service documents */
+interface ServiceDocumentData {
+    /**
+     * Title field in *Service*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: service.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Description field in *Service*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: service.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Service document from Prismic
+ *
+ * - **API ID**: `service`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ServiceDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<ServiceDocumentData>, "service", Lang>;
 /** Content for Work documents */
 interface WorkDocumentData {
     /**
@@ -63,7 +145,7 @@ interface WorkDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type WorkDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<WorkDocumentData>, "work", Lang>;
-export type AllDocumentTypes = WorkDocument;
+export type AllDocumentTypes = AboutPageDocument | HomePageDocument | ServiceDocument | WorkDocument;
 /**
  * Primary content in BasicContent → Primary
  *
@@ -147,6 +229,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { WorkDocumentData, WorkDocument, AllDocumentTypes, BasicContentSliceDefaultPrimary, BasicContentSliceDefault, BasicContentSliceVariation, BasicContentSlice, ImageGallerySliceDefaultItem, ImageGallerySliceDefault, ImageGallerySliceVariation, ImageGallerySlice };
+        export type { AboutPageDocumentData, AboutPageDocument, HomePageDocumentData, HomePageDocument, ServiceDocumentData, ServiceDocument, WorkDocumentData, WorkDocument, AllDocumentTypes, BasicContentSliceDefaultPrimary, BasicContentSliceDefault, BasicContentSliceVariation, BasicContentSlice, ImageGallerySliceDefaultItem, ImageGallerySliceDefault, ImageGallerySliceVariation, ImageGallerySlice };
     }
 }

@@ -2,8 +2,9 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <div className='w-full bg-white px-4'>
-      <h1 className='text-8xl uppercase w-full text-center'>Studilaroche</h1>
+    <div className='w-full bg-white p-4'>
+      {/* eslint-disable-next-line */}
+      <img src='/logo.svg' alt='studilaroche'></img>
 
       <div className='w-full flex flex-row justify-between text-lg'>
         <Link href='/'>Home</Link>

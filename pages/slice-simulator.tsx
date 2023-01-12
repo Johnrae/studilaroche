@@ -5,14 +5,17 @@ import { components } from '../slices'
 import state from '../.slicemachine/libraries-state.json'
 
 const SliceSimulatorPage = () => {
-  return (
-    <SliceSimulator
-      sliceZone={({ slices }) => (
-        <SliceZone slices={slices} components={components} />
-      )}
-      state={state}
-    />
-  )
+  if (components || Object.keys(components).length === 0) return null
+
+  return null
+  // return (
+  //   <SliceSimulator
+  //     sliceZone={({ slices }) => (
+  //       <SliceZone slices={slices} components={components} />
+  //     )}
+  //     state={state}
+  //   />
+  // )
 }
 
 export default SliceSimulatorPage

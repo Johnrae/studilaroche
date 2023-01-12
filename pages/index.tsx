@@ -1,8 +1,8 @@
 'use client'
 
 import Head from 'next/head'
+import Link from 'next/link'
 import { useLayoutEffect } from 'react'
-import styles from '../styles/Home.module.css'
 import { runCanvasAnimation } from '../utils/canvas'
 
 export default function Home() {
@@ -27,8 +27,14 @@ export default function Home() {
         <canvas className='h-screen w-screen block fixed top-0 left-0 grayscale'></canvas>
         <div className='h-screen w-screen bg-orange-800 fixed z-10 mix-blend-screen'></div>
 
-        <div className='relative flex h-full items-center justify-center z-10 '>
+        <div className='fixed w-full top-0 flex justify-center z-10 bg-white'>
           <h1 className='text-8xl text-bold uppercase'>Studilaroche</h1>
+        </div>
+
+        <div className='relative flex justify-center z-10 bg-white'>
+          <Link href='/about' className='fixed top-[20%] left-[30%] rotate-12'>
+            About
+          </Link>
         </div>
       </main>
     </>

@@ -1,21 +1,29 @@
+import { PrismicRichText } from '@prismicio/react'
+import Header from '../../components/Header'
 import { createClient } from '../../prismic/client'
 
-export default function AboutPage({ data }: { data: any | null }) {
-  console.log(data)
+export default function AboutPage({ doc }: { doc: any | null }) {
+  console.log(doc)
+  console.log(doc.data.content)
   return (
     <div>
+      <Header></Header>
       <h1>about</h1>
       <span></span>
+      <div className='prose text-2xl'>
+        <PrismicRichText field={doc.data.content} />
+      </div>
     </div>
   )
 }
 
 export async function getStaticProps() {
   const client = createClient()
-  const data = await client.getSingle('about_page')
+  const doc = await client.getSingle('about_page')
+
   return {
     props: {
-      data,
+      doc,
     },
   }
 }

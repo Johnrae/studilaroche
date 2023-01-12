@@ -25,14 +25,17 @@ export default function Home() {
       </Head>
       <main className='h-screen w-screen'>
         <canvas className='h-screen w-screen block fixed top-0 left-0 grayscale'></canvas>
-        <div className='h-screen w-screen bg-orange-800 fixed z-10 mix-blend-screen'></div>
+        <div className='h-screen w-screen bg-cyan-400 fixed z-10 mix-blend-multiply'></div>
 
         <div className='fixed w-full top-0 flex justify-center z-10 bg-white'>
           <h1 className='text-8xl text-bold uppercase'>Studilaroche</h1>
         </div>
 
         <div className='relative flex justify-center z-10 bg-white'>
-          <Link href='/about' className='fixed top-[20%] left-[30%] rotate-12'>
+          <Link
+            href='/about'
+            className='fixed top-[20%] left-[30%] rotate-12 bg-white px-2 uppercase text-lg'
+          >
             About
           </Link>
         </div>

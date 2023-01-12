@@ -30,7 +30,14 @@
     "work": {},
     "service": {},
     "home_page": {},
-    "about_page": {}
+    "about_page": {
+      "content": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "BasicContent": {

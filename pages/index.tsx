@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useLayoutEffect } from 'react'
 import { runCanvasAnimation } from '../utils/canvas'
+import { gsap } from 'gsap'
 
 export default function Home() {
   useLayoutEffect(() => {
@@ -15,6 +16,26 @@ export default function Home() {
     return () => stop()
   }, [])
 
+  // useLayoutEffect(() => {
+  //   gsap.fromTo(
+  //     '.grayscale',
+  //     {
+  //       filter: 'grayscale(0)',
+  //     },
+  //     {
+  //       filter: 'grayscale(1)',
+  //       duration: 1,
+  //       delay: 1,
+  //     }
+  //   )
+  //   gsap.fromTo(
+  //     '.overlay',
+  //     { opacity: 0 },
+  //     { opacity: 1, duration: 1, delay: 1 }
+  //   )
+  //   gsap.timeline()
+  // }, [])
+
   return (
     <>
       <Head>
@@ -25,13 +46,13 @@ export default function Home() {
       </Head>
       <main className='h-screen w-screen'>
         <canvas className='h-screen w-screen block fixed top-0 left-0 grayscale'></canvas>
-        <div className='h-screen w-screen bg-cyan-400 fixed z-10 mix-blend-multiply'></div>
+        <div className='overlay h-screen w-screen bg-cyan-400 fixed z-10 mix-blend-multiply'></div>
 
-        <div className='fixed w-full top-0 flex justify-center z-10 bg-white'>
+        <div className='title fixed w-full top-0 flex justify-center z-10 bg-white'>
           <h1 className='text-8xl text-bold uppercase'>Studilaroche</h1>
         </div>
 
-        <div className='relative flex justify-center z-10 bg-white'>
+        <div className='links relative flex justify-center z-10 bg-white'>
           <Link
             href='/about'
             className='fixed top-[20%] left-[30%] rotate-12 bg-white px-2 uppercase text-lg'

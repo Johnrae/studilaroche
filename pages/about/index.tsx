@@ -18,7 +18,7 @@ export default function AboutPage({ doc }: { doc: any | null }) {
             width={500}
             height={600}
           />
-          <div className='h-full w-[500px] z-10 absolute top-0 mix-blend-screen bg-cyan-400'></div>
+          <div className='h-full w-[500px] z-10 absolute top-0 mix-blend-screen bg-cyan-600'></div>
         </div>
       </div>
       <div className='grid grid-cols-4 relative z-30 mt-20'>

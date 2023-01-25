@@ -6,7 +6,16 @@ module.exports = {
     './slices/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        cyan: {
+          600: '#0083a3',
+        },
+        stone: {
+          50: '#fbf7f3',
+        },
+      },
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 }

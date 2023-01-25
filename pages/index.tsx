@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useLayoutEffect } from 'react'
 import { runCanvasAnimation } from '../utils/canvas'
 import { gsap } from 'gsap'
+import Header from '../components/Header'
 
 export default function Home() {
   useLayoutEffect(() => {
@@ -46,26 +47,10 @@ export default function Home() {
       </Head>
       <main className='h-screen w-screen'>
         <canvas className='h-screen w-screen block fixed top-0 left-0 grayscale'></canvas>
-        <div className='overlay h-screen w-screen bg-cyan-400 fixed z-10 mix-blend-multiply'></div>
+        <div className='overlay h-screen w-screen bg-cyan-600 fixed z-10 mix-blend-screen'></div>
 
-        <div className='title fixed w-full p-4 top-0 flex justify-center z-10 bg-white'>
-          {/* eslint-disable-next-line */}
-          <img src='/logo.svg' alt='studilaroche'></img>
-        </div>
-
-        <div className='links relative flex justify-center z-10 bg-white'>
-          <Link
-            href='/about'
-            className='fixed top-[20%] left-[30%] rotate-12 bg-cyan-400 text-right pl-6 pr-2 py-4 rounded-[80%] uppercase font-bold text-lg'
-          >
-            About
-          </Link>
-          <Link
-            href='/about'
-            className='fixed top-[60%] left-[60%] -rotate-6 bg-cyan-400 text-right pl-6 pr-2 py-4 rounded-[80%] uppercase font-bold text-lg'
-          >
-            Work
-          </Link>
+        <div className='title fixed w-full top-0 flex  z-10 bg-white'>
+          <Header></Header>
         </div>
       </main>
     </>

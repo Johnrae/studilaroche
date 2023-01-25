@@ -2,16 +2,22 @@ import { PrismicRichText } from '@prismicio/react'
 import Header from '../../components/Header'
 import { createClient } from '../../prismic/client'
 
-export default function WorkPage({ doc }: { doc: any | null }) {
-  console.log(doc)
-  console.log(doc.data.content)
+export default function WorkPage({ data }: { data: any[] | null }) {
+  console.log(data)
   return (
     <div>
       <Header></Header>
-      <h1>about</h1>
-      <span></span>
-      <div className='prose text-2xl'>
-        <PrismicRichText field={doc.data.content} />
+      <div className='py-10 divide-y divide-black px-20'>
+        {data?.map((doc) => (
+          <div key={doc.id} className='grid grid-cols-4 py-4'>
+            <div className='col-span-1'>
+              <span>{doc.data.title}</span>
+            </div>
+            <div className='prose text-2xl col-span-3'>
+              <PrismicRichText field={doc.data.description} />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
@@ -19,11 +25,11 @@ export default function WorkPage({ doc }: { doc: any | null }) {
 
 export async function getStaticProps() {
   const client = createClient()
-  const doc = await client.getSingle('about_page')
+  const data = await client.getAllByType('service')
 
   return {
     props: {
-      doc,
+      data,
     },
   }
 }

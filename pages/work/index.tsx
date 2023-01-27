@@ -2,13 +2,14 @@ import { PrismicRichText } from '@prismicio/react'
 import Header from '../../components/Header'
 import { createClient } from '../../prismic/client'
 import Image from 'next/image'
+import Footer from '../../components/Footer'
 
 export default function WorkPage({ data }: { data: any[] | null }) {
   console.log(data)
   return (
-    <div>
+    <>
       <Header></Header>
-      <div className='grid grid-cols-4 gap-10 px-20'>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-10 px-10'>
         {data?.map((work) => (
           <div key={work.id} className='group hover:cursor-pointer'>
             <div className='relative  '>
@@ -18,7 +19,7 @@ export default function WorkPage({ data }: { data: any[] | null }) {
                 alt={`album art for the album ${work.data.title} by ${work.data.artist}`}
                 width={500}
                 height={500}
-              ></Image>
+              />
               <div className='bg-cyan-600 h-full w-full mix-blend-screen group-hover:opacity-0 transition-all absolute inset-0'></div>
             </div>
             <p>{work.data.title}</p>
@@ -30,7 +31,8 @@ export default function WorkPage({ data }: { data: any[] | null }) {
           </div>
         ))}
       </div>
-    </div>
+      <Footer />
+    </>
   )
 }
 

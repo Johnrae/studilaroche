@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <div className='w-full bg-white p-4'>
+    <div className='w-full bg-white px-10 py-8'>
       <div className='w-full'>
         <Link href='/'>
           {/* eslint-disable-next-line */}
@@ -10,7 +10,7 @@ export default function Header() {
         </Link>
       </div>
 
-      <div className='w-full flex flex-row justify-end space-x-16 text-xl'>
+      <div className='w-full flex flex-row justify-end space-x-16 text-xl mt-8'>
         <Link href='/about'>About</Link>
         <Link href='/services'>Services</Link>
         <Link href='/work'>Work</Link>

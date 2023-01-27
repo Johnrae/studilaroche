@@ -1,15 +1,19 @@
 import { PrismicRichText } from '@prismicio/react'
+import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import { createClient } from '../../prismic/client'
 
 export default function WorkPage({ data }: { data: any[] | null }) {
   console.log(data)
   return (
-    <div>
+    <>
       <Header></Header>
-      <div className='py-10 divide-y divide-black px-20'>
+      <div className='py-8 px-10'>
         {data?.map((doc) => (
-          <div key={doc.id} className='grid grid-cols-4 py-4'>
+          <div
+            key={doc.id}
+            className='grid grid-cols-4 gap-10 py-4 border-t border-black'
+          >
             <div className='col-span-1'>
               <span>{doc.data.title}</span>
             </div>
@@ -19,7 +23,8 @@ export default function WorkPage({ data }: { data: any[] | null }) {
           </div>
         ))}
       </div>
-    </div>
+      <Footer />
+    </>
   )
 }
 

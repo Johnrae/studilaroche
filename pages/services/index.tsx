@@ -8,11 +8,11 @@ export default function WorkPage({ data }: { data: any[] | null }) {
   return (
     <>
       <Header></Header>
-      <div className='py-8 px-10'>
+      <div className='px-10'>
         {data?.map((doc) => (
           <div
             key={doc.id}
-            className='grid grid-cols-4 gap-10 py-4 border-t border-black'
+            className='grid grid-cols-4 py-4 border-t border-black'
           >
             <div className='col-span-1'>
               <span>{doc.data.title}</span>

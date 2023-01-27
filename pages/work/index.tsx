@@ -41,7 +41,7 @@ export async function getStaticProps() {
   const data = await client.getAllByType('work', {
     orderings: [
       {
-        field: 'document.release_date',
+        field: 'my.work.release_date',
         direction: 'desc',
       },
     ],

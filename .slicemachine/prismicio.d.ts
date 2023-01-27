@@ -146,6 +146,17 @@ interface WorkDocumentData {
      *
      */
     release_date: prismicT.DateField;
+    /**
+     * url field in *Work*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: work.url
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    url: prismicT.KeyTextField;
 }
 /**
  * Work document from Prismic

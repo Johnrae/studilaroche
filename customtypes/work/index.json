@@ -46,6 +46,13 @@
           "label": "Release Date",
           "placeholder": ""
         }
+      },
+      "url": {
+        "type": "Text",
+        "config": {
+          "label": "url",
+          "placeholder": ""
+        }
       }
     }
   }

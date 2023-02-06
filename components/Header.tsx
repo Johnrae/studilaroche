@@ -22,9 +22,9 @@ export default function Header() {
           <Link className={linkClasses} href='/work'>
             Work
           </Link>
-          <a className={linkClasses} href='mailto:ben@studilaroche.com'>
+          <Link className={linkClasses} href='/contact'>
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -13,8 +13,8 @@ export default function Header() {
 
       <div className='w-full grid grid-cols-4 gap-10 mt-4'>
         <div className='col-span-4 md:col-start-3 md:col-span-2 flex w-full justify-between'>
-          <Link className={linkClasses} href='/about'>
-            About
+          <Link className={linkClasses} href='/'>
+            Home
           </Link>
           <Link className={linkClasses} href='/services'>
             Services

@@ -14,6 +14,9 @@ module.exports = {
         stone: {
           50: '#fbf7f3',
         },
+        pink: {
+          200: '#EAC8B6',
+        },
       },
     },
   },

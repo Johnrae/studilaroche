@@ -15,7 +15,8 @@ module.exports = {
           50: '#fbf7f3',
         },
         pink: {
-          200: '#EAC8B6',
+          200: '#dcbab5',
+          400: '#fadadd',
         },
       },
     },

@@ -55,30 +55,27 @@ export default function Home({ doc }: { doc: any | null }) {
         </div>
 
         <div className='h-screen w-screen'>
-          <canvas className='h-screen w-screen block absolute top-0 left-0 grayscale'></canvas>
-          <div className='overlay h-screen w-screen bg-cyan-600 absolute z-10 mix-blend-screen'></div>
+          <div className='overlay h-screen w-screen bg-pink-400 absolute z-10 mix-blend-multiply'></div>
+          <canvas className='h-screen w-screen block absolute top-0 left-0 contrast-125 brightness-125 grayscale'></canvas>
+          <div className='overlay h-screen w-screen bg-cyan-900 absolute z-10 mix-blend-screen'></div>
         </div>
 
         <div className='py-24'>
-          <div className='px-10 relative'>
-            <div className='hidden md:block absolute top-0 left-10 w-[50%] '>
-              <div className='relative h-[600px] overflow-hidden'>
-                {/* @ts-expect-error */}
-                <NextImage
-                  className='absolute top-[50%] -translate-y-[50%] grayscale contrast-125 brightness-125'
-                  src={'/coffee.jpg'}
-                  alt={'Ben Price enjoying a cup of joe'}
-                  width={500}
-                  height={600}
-                />
-                <div className='h-full w-[500px] z-10 absolute top-0 mix-blend-screen bg-cyan-600'></div>
-              </div>
+          <div className='px-10 mx-auto'>
+            <div className='h-[500px] w-[400px] mr-10 mb-5 relative overflow-hidden float-left'>
+              <div className='h-full w-[500px] absolute top-0 mix-blend-multiply bg-pink-400'></div>
+              {/* @ts-expect-error */}
+              <NextImage
+                className='absolute top-[50%] -translate-y-[50%] grayscale contrast-125 brightness-125'
+                src={'/coffee.jpg'}
+                alt={'Ben Price enjoying a cup of joe'}
+                width={500}
+                height={600}
+              />
+              <div className='h-full w-[500px] absolute top-0 mix-blend-screen bg-cyan-900'></div>
             </div>
-            <div className='md:grid grid-cols-4 gap-10 relative z-30 md:pt-20'>
-              <div className='col-span-1'></div>
-              <div className='prose text-2xl col-span-3 text-black'>
-                <PrismicRichText field={doc.data.content} />
-              </div>
+            <div className='prose mx-auto text-black text-2xl'>
+              <PrismicRichText field={doc.data.content} />
             </div>
           </div>
         </div>

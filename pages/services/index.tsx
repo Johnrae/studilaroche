@@ -17,7 +17,7 @@ export default function WorkPage({ data }: { data: any[] | null }) {
             <div className='col-span-1'>
               <span>{doc.data.title}</span>
             </div>
-            <div className='prose text-2xl col-span-3'>
+            <div className='prose text-black text-black text-black text-black text-black text-2xl col-span-3'>
               <PrismicRichText field={doc.data.description} />
             </div>
           </div>

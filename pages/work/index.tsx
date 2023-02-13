@@ -14,6 +14,7 @@ export default function WorkPage({ data }: { data: any[] | null }) {
           <div key={work.id} className='group hover:cursor-pointer'>
             <a href={work.data.url} target='_blank' rel='noreferrer'>
               <div className='relative'>
+                <div className='bg-pink-400 z-10 h-full w-full mix-blend-multiply group-hover:opacity-0 transition-all absolute inset-0'></div>
                 <Image
                   className='grayscale group-hover:grayscale-0 transition-all'
                   src={work.data.album_art.square.url}
@@ -21,12 +22,12 @@ export default function WorkPage({ data }: { data: any[] | null }) {
                   width={500}
                   height={500}
                 />
-                <div className='bg-cyan-600 h-full w-full mix-blend-screen group-hover:opacity-0 transition-all absolute inset-0'></div>
+                <div className='bg-cyan-600 z-10 h-full w-full mix-blend-screen group-hover:opacity-0 transition-all absolute inset-0'></div>
               </div>
               <p>{work.data.title}</p>
               <p>{work.data.artist}</p>
 
-              <div className='prose text-2xl col-span-3'>
+              <div className='prose text-black text-2xl col-span-3'>
                 <PrismicRichText field={work.data.description} />
               </div>
             </a>

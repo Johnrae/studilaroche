@@ -18,6 +18,7 @@ export default function ContactPage() {
         </div>
 
         <div className='col-span-8 md:col-span-4 lg:col-span-5 relative'>
+          <div className='h-full w-full z-10 absolute top-0 mix-blend-multiply bg-pink-400'></div>
           <Image
             src='/controls.jpg'
             className='grayscale'
@@ -25,7 +26,7 @@ export default function ContactPage() {
             width={1855}
             height={1243}
           />
-          <div className='h-full w-full z-10 absolute top-0 mix-blend-screen bg-cyan-600'></div>
+          <div className='h-full w-full z-10 absolute top-0 mix-blend-screen bg-cyan-900'></div>
         </div>
       </div>
       <Footer />

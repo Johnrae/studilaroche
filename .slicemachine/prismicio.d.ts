@@ -6,10 +6,10 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
-/** Content for About Page documents */
+/** Content for Home Page documents */
 interface AboutPageDocumentData {
     /**
-     * content field in *About Page*
+     * content field in *Home Page*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -19,9 +19,31 @@ interface AboutPageDocumentData {
      *
      */
     content: prismicT.RichTextField;
+    /**
+     * Recent Work field in *Home Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: Comma separated list of bands
+     * - **API ID Path**: about_page.recent_work
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    recent_work: prismicT.KeyTextField;
+    /**
+     * Older Work field in *Home Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about_page.older_work
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    older_work: prismicT.KeyTextField;
 }
 /**
- * About Page document from Prismic
+ * Home Page document from Prismic
  *
  * - **API ID**: `about_page`
  * - **Repeatable**: `false`
@@ -30,33 +52,10 @@ interface AboutPageDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type AboutPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<AboutPageDocumentData>, "about_page", Lang>;
-/** Content for Home Page documents */
-interface HomePageDocumentData {
-    /**
-     * Content field in *Home Page*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_page.content
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    content: prismicT.RichTextField;
-    /**
-     * Featured Image field in *Home Page*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_page.featured_image
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    featured_image: prismicT.ImageField<never>;
-}
+/** Content for About documents */
+type HomePageDocumentData = Record<string, never>;
 /**
- * Home Page document from Prismic
+ * About document from Prismic
  *
  * - **API ID**: `home_page`
  * - **Repeatable**: `false`

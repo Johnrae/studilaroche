@@ -21,6 +21,9 @@ export default function Home({ doc }: { doc: any | null }) {
     return () => stop()
   }, [])
 
+  const oldWork = doc.data.older_work.split(', ')
+  const newWork = doc.data.recent_work.split(', ')
+
   // useLayoutEffect(() => {
   //   gsap.fromTo(
   //     '.grayscale',
@@ -76,6 +79,26 @@ export default function Home({ doc }: { doc: any | null }) {
             </div>
             <div className='prose mx-auto text-black text-2xl'>
               <PrismicRichText field={doc.data.content} />
+            </div>
+            <div className='grid grid-cols-3 my-10 max-w-prose mx-auto'>
+              <div className='col-span-3'>
+                <h2 className=' mb-4'>Recent Work</h2>
+              </div>
+              {newWork.map((work: string) => (
+                <span className='text-sm' key={work}>
+                  {work}
+                </span>
+              ))}
+            </div>
+            <div className='grid grid-cols-3 my-10 max-w-prose mx-auto'>
+              <div className='col-span-3'>
+                <h2 className=' mb-4'>Older Work</h2>
+              </div>
+              {oldWork.map((work: string) => (
+                <span className='text-sm' key={work}>
+                  {work}
+                </span>
+              ))}
             </div>
           </div>
         </div>

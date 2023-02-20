@@ -1,27 +1,9 @@
 {
   "id": "home_page",
-  "label": "Home Page",
+  "label": "About",
   "repeatable": false,
   "status": true,
   "json": {
-    "Main": {
-      "content": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Content",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-        }
-      },
-      "featured_image": {
-        "type": "Image",
-        "config": {
-          "label": "Featured Image",
-          "constraint": {},
-          "thumbnails": []
-        }
-      }
-    }
+    "Main": {}
   }
 }

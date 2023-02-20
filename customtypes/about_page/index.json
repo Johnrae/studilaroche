@@ -1,6 +1,6 @@
 {
   "id": "about_page",
-  "label": "About Page",
+  "label": "Home Page",
   "repeatable": false,
   "status": true,
   "json": {
@@ -12,6 +12,20 @@
           "placeholder": "",
           "allowTargetBlank": true,
           "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "recent_work": {
+        "type": "Text",
+        "config": {
+          "label": "Recent Work",
+          "placeholder": "Comma separated list of bands"
+        }
+      },
+      "older_work": {
+        "type": "Text",
+        "config": {
+          "label": "Older Work",
+          "placeholder": ""
         }
       }
     }

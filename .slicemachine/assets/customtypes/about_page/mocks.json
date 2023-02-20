@@ -5,9 +5,19 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Nostrud dolor amet in magna amet aliqua consectetur aliquip velit."
+          "text": "Aliqua dolor esse deserunt. Non magna reprehenderit dolore labore do proident sint sunt. Nulla elit enim id dolor eiusmod consequat irure eiusmod."
         }
       }
     ]
+  },
+  "recent_work": {
+    "__TYPE__": "FieldContent",
+    "value": "adventure",
+    "type": "Text"
+  },
+  "older_work": {
+    "__TYPE__": "FieldContent",
+    "value": "line",
+    "type": "Text"
   }
 }

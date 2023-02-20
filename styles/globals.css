@@ -6,7 +6,7 @@ html,
 body,
 #__next {
   height: 100%;
-  @apply bg-pink-400;
+  @apply bg-white;
 }
 
 .duotone::before {
@@ -19,6 +19,7 @@ body,
   mix-blend-mode: multiply;
   @apply bg-pink-400;
 }
+
 ​.duotone::after {
   content: '';
   width: 100%;
@@ -31,5 +32,5 @@ body,
 }
 
 *::selection {
-  @apply bg-cyan-900 text-white;
+  @apply bg-cyan-600 text-white;
 }

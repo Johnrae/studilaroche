@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Header() {
   const linkClasses = 'hover:underline underline-offset-4 py-1.5 px-2.5'
   return (
-    <div className='w-full bg-pink-400 px-10 py-5'>
+    <div className='w-full bg-white px-10 py-5'>
       <div className='w-full'>
         <Link href='/'>
           {/* eslint-disable-next-line */}

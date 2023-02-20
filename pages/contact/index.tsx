@@ -26,7 +26,7 @@ export default function ContactPage() {
             width={1855}
             height={1243}
           />
-          <div className='h-full w-full z-10 absolute top-0 mix-blend-screen bg-cyan-900'></div>
+          <div className='h-full w-full z-10 absolute top-0 mix-blend-screen bg-cyan-600'></div>
         </div>
       </div>
       <Footer />

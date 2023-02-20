@@ -56,8 +56,8 @@ export default function Home({ doc }: { doc: any | null }) {
 
         <div className='h-screen w-screen'>
           <div className='overlay h-screen w-screen bg-pink-400 absolute z-10 mix-blend-multiply'></div>
-          <canvas className='h-screen w-screen block absolute top-0 left-0 contrast-125 brightness-125 grayscale'></canvas>
-          <div className='overlay h-screen w-screen bg-cyan-900 absolute z-10 mix-blend-screen'></div>
+          <canvas className='h-screen w-screen block absolute top-0 left-0 contrast-125 brightness-125 grayscale invert'></canvas>
+          <div className='overlay h-screen w-screen bg-cyan-600 absolute z-10 mix-blend-screen'></div>
         </div>
 
         <div className='py-10'>
@@ -72,7 +72,7 @@ export default function Home({ doc }: { doc: any | null }) {
                 width={500}
                 height={600}
               />
-              <div className='h-full w-[500px] absolute top-0 mix-blend-screen bg-cyan-900'></div>
+              <div className='h-full w-[500px] absolute top-0 mix-blend-screen bg-cyan-600'></div>
             </div>
             <div className='prose mx-auto text-black text-2xl'>
               <PrismicRichText field={doc.data.content} />

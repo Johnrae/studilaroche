@@ -60,7 +60,7 @@ export default function Home({ doc }: { doc: any | null }) {
           <div className='overlay h-screen w-screen bg-cyan-900 absolute z-10 mix-blend-screen'></div>
         </div>
 
-        <div className='py-24'>
+        <div className='py-10'>
           <div className='px-10 mx-auto'>
             <div className='h-[500px] w-[400px] mr-10 mb-5 relative overflow-hidden float-left'>
               <div className='h-full w-[500px] absolute top-0 mix-blend-multiply bg-pink-400'></div>

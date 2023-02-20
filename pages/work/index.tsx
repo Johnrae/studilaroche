@@ -22,7 +22,7 @@ export default function WorkPage({ data }: { data: any[] | null }) {
                   width={500}
                   height={500}
                 />
-                <div className='bg-cyan-600 z-10 h-full w-full mix-blend-screen group-hover:opacity-0 transition-all absolute inset-0'></div>
+                <div className='bg-cyan-900 z-10 h-full w-full mix-blend-screen group-hover:opacity-0 transition-all absolute inset-0'></div>
               </div>
               <p>{work.data.title}</p>
               <p>{work.data.artist}</p>

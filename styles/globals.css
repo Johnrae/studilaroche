@@ -29,3 +29,7 @@ body,
   mix-blend-mode: lighten;
   @apply bg-cyan-600;
 }
+
+*::selection {
+  @apply bg-cyan-900 text-white;
+}

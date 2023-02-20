@@ -79,26 +79,27 @@ export default function Home({ doc }: { doc: any | null }) {
             </div>
             <div className='prose mx-auto text-black text-2xl'>
               <PrismicRichText field={doc.data.content} />
-            </div>
-            <div className='grid grid-cols-3 my-10 max-w-prose mx-auto'>
-              <div className='col-span-3'>
-                <h2 className=' mb-4'>Recent Work</h2>
+
+              <div className='grid grid-cols-2 gap-x-4 md:grid-cols-3 my-10 w-prose mx-auto'>
+                <div className='col-span-2 md:col-span-3'>
+                  <h2 className='text-2xl font-normal mb-4'>Recent Work</h2>
+                </div>
+                {newWork.map((work: string) => (
+                  <span className='text-base' key={work}>
+                    {work}
+                  </span>
+                ))}
               </div>
-              {newWork.map((work: string) => (
-                <span className='text-sm' key={work}>
-                  {work}
-                </span>
-              ))}
-            </div>
-            <div className='grid grid-cols-3 my-10 max-w-prose mx-auto'>
-              <div className='col-span-3'>
-                <h2 className=' mb-4'>Older Work</h2>
+              <div className='grid grid-cols-2 gap-x-4 md:grid-cols-3 my-10 w-prose mx-auto'>
+                <div className='col-span-2 md:col-span-3'>
+                  <h2 className='text-2xl font-normal mb-4'>Older Work</h2>
+                </div>
+                {oldWork.map((work: string) => (
+                  <span className='text-base' key={work}>
+                    {work}
+                  </span>
+                ))}
               </div>
-              {oldWork.map((work: string) => (
-                <span className='text-sm' key={work}>
-                  {work}
-                </span>
-              ))}
             </div>
           </div>
         </div>

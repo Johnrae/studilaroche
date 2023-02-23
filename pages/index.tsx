@@ -65,7 +65,7 @@ export default function Home({ doc }: { doc: any | null }) {
 
         <div className='py-10'>
           <div className='px-10 mx-auto'>
-            <div className='h-[500px] w-[400px] mr-10 mb-5 relative overflow-hidden float-left'>
+            <div className='h-[400px] sm:h-[500px] w-full sm:w-[400px] mr-10 mb-5 relative overflow-hidden float-left'>
               <div className='h-full w-[500px] absolute top-0 mix-blend-multiply bg-pink-400'></div>
               {/* @ts-expect-error */}
               <NextImage
@@ -80,25 +80,24 @@ export default function Home({ doc }: { doc: any | null }) {
             <div className='prose mx-auto text-black text-2xl'>
               <PrismicRichText field={doc.data.content} />
 
-              <div className='grid grid-cols-2 gap-x-4 md:grid-cols-3 my-10 w-prose mx-auto'>
-                <div className='col-span-2 md:col-span-3'>
-                  <h2 className='text-2xl font-normal mb-4'>Recent Work</h2>
-                </div>
-                {newWork.map((work: string) => (
-                  <span className='text-base' key={work}>
-                    {work}
-                  </span>
-                ))}
-              </div>
-              <div className='grid grid-cols-2 gap-x-4 md:grid-cols-3 my-10 w-prose mx-auto'>
-                <div className='col-span-2 md:col-span-3'>
-                  <h2 className='text-2xl font-normal mb-4'>Older Work</h2>
-                </div>
-                {oldWork.map((work: string) => (
-                  <span className='text-base' key={work}>
-                    {work}
-                  </span>
-                ))}
+              <div className='my-10'>
+                <h2 className='text-2xl font-normal mb-4'>Recent Work</h2>
+                <ul className='pl-4 mb-0 columns-2 md:columns-3'>
+                  {newWork.map((work: string) => (
+                    <li className='text-base my-0' key={work}>
+                      {work}
+                    </li>
+                  ))}
+                </ul>
+
+                <h2 className='text-2xl font-normal mb-4'>Older Work</h2>
+                <ul className='pl-4 mb-0 columns-2 md:columns-3'>
+                  {oldWork.map((work: string) => (
+                    <li className='text-base my-0' key={work}>
+                      {work}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

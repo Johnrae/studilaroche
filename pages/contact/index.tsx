@@ -8,7 +8,7 @@ export default function ContactPage() {
       <Header></Header>
       <div className='px-10 grid grid-cols-8 gap-10'>
         <div className='col-span-8 md:col-span-4 lg:col-span-3'>
-          <p className='text-2xl '>{"I'd love to hear from you."}</p>
+          <p className='text-2xl mb-4'>{"I'd love to hear from you."}</p>
           <p className='text-2xl'>
             You can contact me at{' '}
             <a href='mailto:studilaroche@gmail.com' className='underline'>

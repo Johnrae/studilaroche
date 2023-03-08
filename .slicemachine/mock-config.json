@@ -28,7 +28,14 @@
       "links": {}
     },
     "work": {},
-    "service": {},
+    "service": {
+      "description": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
     "home_page": {},
     "about_page": {
       "content": {

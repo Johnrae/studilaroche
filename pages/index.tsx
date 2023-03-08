@@ -81,7 +81,9 @@ export default function Home({ doc }: { doc: any | null }) {
               <PrismicRichText field={doc.data.content} />
 
               <div className='my-10'>
-                <h2 className='text-2xl font-normal mb-4'>Recent Work</h2>
+                <h2 className='text-2xl uppercase font-normal mb-4'>
+                  Recent Work
+                </h2>
                 <ul className='pl-4 mb-0 marker:text-black columns-2 md:columns-3'>
                   {newWork.map((work: string) => (
                     <li className='text-base my-0' key={work}>
@@ -90,7 +92,9 @@ export default function Home({ doc }: { doc: any | null }) {
                   ))}
                 </ul>
 
-                <h2 className='text-2xl font-normal mb-4'>Older Work</h2>
+                <h2 className='text-2xl uppercase font-normal mb-4'>
+                  Older Work
+                </h2>
                 <ul className='pl-4 mb-0 marker:text-black columns-2 md:columns-3'>
                   {oldWork.map((work: string) => (
                     <li className='text-base my-0' key={work}>

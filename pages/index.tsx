@@ -55,7 +55,7 @@ export default function Home({ doc }: { doc: any | null }) {
         <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
         <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
         <link rel='manifest' href='/site.webmanifest' />
-        <meta name='theme-color' content='#DBC4C1' />
+        <meta name='theme-color' content='#fadadd' />
       </Head>
       <main className=''>
         <div className='title absolute w-full top-0 flex z-50 bg-white'>
@@ -70,17 +70,17 @@ export default function Home({ doc }: { doc: any | null }) {
 
         <div className='py-10'>
           <div className='px-10 mx-auto'>
-            <div className='h-[400px] sm:h-[500px] w-full sm:w-[400px] mr-10 mb-5 relative overflow-hidden float-left'>
-              <div className='h-full w-[500px] absolute top-0 mix-blend-multiply bg-pink-400'></div>
+            <div className='group h-[400px] sm:h-[500px] w-full sm:w-[400px] mr-10 mb-5 relative overflow-hidden float-left'>
+              <div className='h-full w-[500px] absolute top-0 mix-blend-multiply bg-pink-400 group-hover:opacity-0 transition-all'></div>
               {/* @ts-expect-error */}
               <NextImage
-                className='absolute top-[50%] -translate-y-[50%] grayscale contrast-125 brightness-125'
-                src={'/coffee.jpg'}
+                className='absolute top-[50%] -translate-y-[50%] grayscale group-hover:grayscale-0 contrast-125 brightness-125 group-hover:contrast-100 group-hover:brightness-100'
+                src={'/portrait.jpg'}
                 alt={'Ben Price enjoying a cup of joe'}
                 width={500}
                 height={600}
               />
-              <div className='h-full w-[500px] absolute top-0 mix-blend-screen bg-cyan-600'></div>
+              <div className='h-full w-[500px] absolute top-0 mix-blend-screen bg-cyan-600 group-hover:opacity-0 transition-all'></div>
             </div>
             <div className='prose mx-auto text-black text-2xl'>
               <PrismicRichText field={doc.data.content} />
